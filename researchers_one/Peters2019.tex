@@ -110,7 +110,7 @@
 %\runauthor{O. Peters}
 
 \begin{abstract}
-Daniel Bernoulli's study of 1738 \cite{Bernoulli1738} is considered the beginning of expected utility theory. Here I point out that in spite of this, it is formally inconsistent with today's standard form of expected utility theory. Specifically, Bernoulli's criterion for participating in a lottery, as written in his original paper, is not the corresponding expected change in utility. 
+Daniel Bernoulli's study of 1738 \cite{Bernoulli1738} is considered the beginning of expected utility theory. Here I point out that in spite of this, it is formally inconsistent with today's standard form of expected utility theory. Bernoulli's criterion for participating in a lottery, as written in \cite{Bernoulli1738}, is {\it not} the expected change in utility. 
 \end{abstract}
 %\begin{keyword}
 %\kwd{}
@@ -123,9 +123,9 @@ Readers familiar with the context may jump straight to \secref{Bernoullis},  whi
  
 \section{Historical positioning}
 \seclabel{Historical}
-Until the late 17th century it was generally believed that humans, when faced with the choice between two gambles of equal duration\footnote{I will disregard matters of time and discounting here, as they were not considered in Bernoulli's early work, which is the focus of the present study. My perspective on these problems is elaborated in \cite{PetersGell-Mann2016}.} will choose the one that possesses the larger expected wealth change. This earliest decision theory is well summarized by C. Huygens's statement ``if any one should put 3 shillings in one hand without telling me which, and 7 in the other, and give me choice of either of them; I say, it is the same thing as if he should give me 5 shillings...'' \cite{Huygens1657}. We will refer to this as ``Huygens's decision theory'' (HDT). 
+In the second half of the 17th century it was generally believed that humans, when faced with the choice between two gambles of equal duration\footnote{I will disregard matters of time and discounting here, as they were not considered in Bernoulli's early work, which is the focus of the present study. My perspective on these problems is elaborated in \cite{PetersGell-Mann2016}.} will choose the one that possesses the larger expected wealth change. This earliest decision theory, circa from the 1650s, is well summarized by C. Huygens's statement ``if any one should put 3 shillings in one hand without telling me which, and 7 in the other, and give me choice of either of them; I say, it is the same thing as if he should give me 5 shillings...'' \cite{Huygens1657}. We will refer to this as ``Huygens's decision theory'' (HDT). 
 
-In the early 18th century doubts were raised about the realism of this mathematical model of human behavior. Humans do not generally choose the gamble with the largest expected wealth change. In particular, Nicholas Bernoulli introduced the so-called St.~Petersburg gamble, in a letter to Montmort \cite[p.~402]{Montmort1713}, whose expected wealth change is divergent, \ie does not exist. How should such a gamble be evaluated?
+In the early 18th century doubts were raised about the realism of this mathematical model of human behavior. Humans do {\it not} generally choose the gamble with the largest expected wealth change. In particular, this was demonstrated by Nicholas Bernoulli's St.~Petersburg gamble \cite[p.~402]{Montmort1713}, whose expected wealth change is divergent, \ie does not exist. How should such a gamble be evaluated? The divergence leads HDT to predict that people would be willing to pay any finite price to participate in the gamble, but that was not observed.
 
 Expected utility theory emerged out of ideas put forward by Cramer (cited in Bernoulli's 1738 paper) and Daniel Bernoulli, in response to these doubts about HDT. It is a means of accounting for the fact that people do not optimize expected wealth changes when evaluating gambles. We will distinguish between Bernoulli's decision theory (BDT) and what we mean today by ``expected utility theory'' (EUT). Although \cite{Bernoulli1738} is considered the beginning of EUT, it does not actually contain EUT as it is understood today.
 
@@ -133,7 +133,7 @@ An alternative modern accounting for the failure of HDT, using concepts that had
 
 \section{Random variable and expectation value}
 \seclabel{Mathematical}
-For our discussion, we will need two concepts. Different authors favor slightly different nomenclatures, so for the avoidance of doubt I will define explicitly the terms used in this comment. The required concepts are: first a discrete random variable, and second the expectation value. 
+For our discussion, we will need two concepts. Different authors favor slightly different nomenclatures, so for the avoidance of doubt I will define explicitly the terms used in this comment. The required concepts are: (i) a discrete random variable, and (ii) the expectation value. 
 
 \underline{Discrete random variable}\\
 A discrete random variable is an object $Y$, defined by 
@@ -154,7 +154,7 @@ The expectation value of a random variable, $\ave{y}_{P_Y}$, is the sum over the
 \be
 \ave{y}_{P_Y}=\sum_i y_i P_Y(y_i).
 \ee
-The operator $\ave{\cdot}$ is a simple (linear) sum. As a consequence, if $z(y)$ is a linear function of $y$, then the expectation values $\ave{z}_{P_Z}$ and
+The operator $\ave{\cdot}$ is a simple (linear) sum. As a consequence, if $z(y)$ is a {\it linear} function of $y$, then the expectation values $\ave{z}_{P_Z}$ and
 $\ave{y}_{P_Y}$ are trivially related, namely $\ave{z}_{P_Z}=z\left(\ave{y}_{P_Y}\right)$. 
 This is easily proved
 \begin{proof}
@@ -185,28 +185,32 @@ z'(y_i) &=& z' (p_i y_i)
 Again, since the equation has to hold for any $y_i$ it implies a constant first derivative of $z(y)$, which means $z(y)$ is linear.
 \end{proof}
 
-Therefore, Huygens's statement is false and misleading: even if we're only interested in expectation values, working with the random variable $Y$ is not ``the same thing'' as working with its expectation value $\ave{Y}$. However, because many functions $z(y)$ are linearizable for small changes in their arguments, researchers in the early days of probability theory were not fully aware of this complication.
+Therefore, Huygens's statement is both false and misleading: even if we're only interested in expectation values, working with the random variable $Y$ is not ``the same thing'' as working with its expectation value $\ave{Y}$. However, because many functions $z(y)$ are linearizable for small changes in their arguments, researchers in the early days of probability theory were not fully aware of this complication.
 
 \section{Early and recent decision theories}
 \seclabel{Early}
-We model wealth as a number of dollars, $x$, and a gamble as a random variable, $\DX$, whose possible values, $\{\Dx_i\}$, represent the possible dollar-changes in wealth resulting from participating in the gamble. For example, consider a coin toss: we have to pay a \$1 fee to participate, if the coin lands tails we receive nothing, if it lands heads we receive \$3. This would be modelled as a random variable with two discrete possible values, $\Dx_1=-\$1$ (net change in wealth if the coin shows tails, we receive nothing but have paid the fee) and $\Dx_2=+\$2$ (net change in wealth if the coin shows heads). The probabilities would be $P_\DX(\Dx_1)=P_\DX(\Dx_2)=0.5$.
+We model wealth as a dollar amount, $x$, and a gamble as a random variable, $\DX$, whose possible values, $\{\Dx_i\}$, represent the possible changes in wealth resulting from participating in the gamble. 
 
-In general, we have a gamble modeled by some random variable $\DX$.
+For example, consider a coin toss: we have to pay a \$1 fee to participate, if the coin lands tails we receive nothing, if it lands heads we receive \$3. This would be modelled as a random variable with two discrete possible values, $\Dx_1=-\$1$ (net change in wealth if the coin shows tails, we receive nothing but have paid the fee) and $\Dx_2=+\$2$ (net change in wealth if the coin shows heads). The probabilities would be $P_\DX(\Dx_1)=P_\DX(\Dx_2)=0.5$.
+
+%In general, we have a gamble modeled by some random variable $\DX$.
 
 \subsection{Huygens's decision theory}
 Imagine now deciding whether to participate in a gamble. This amounts to a comparison between no change in wealth (non-participation, which is a trivial gamble, sometimes called the null-gamble) and some evaluation of the random variable $\DX$. The evaluation of $\DX$ in HDT was $\ave{\Dx}$: the gamble is evaluated by comparing $\ave{\Dx}$ to 0. If $\ave{\Dx}>0$ (like in the example), this decision theory predicts that people will accept the gamble, if $\ave{\Dx}<0$ the prediction is non-participation.
 
-Following discussions in the early 18th century \cite[p.~402]{Montmort1713}, it became clear that this decision theory is not a realistic model of human behavior, and expected utility theory was developed as a better fit to the observations. We will come to Bernoulli's theory in the next section. First, I present today's standard EUT, almost exclusively in use at least since Laplace's early book on then-nascent probability theory \cite{Laplace1814}. 
+Following discussions in the early 18th century \cite[p.~402]{Montmort1713}, it became clear that this decision theory is not a realistic model of human behavior, and expected utility theory was developed as a better fit to the observations. 
 
 \subsection{Expected utility theory}
-Instead of maximizing $\ave{\Dx}$ in the choice of gambles, it appears that humans in their decisions maximize the expected change of a different random variable. Wealth is mapped into utility of wealth $u(x)$, and human decisions are now modeled as maximizing the expected change in utility, 
+We will come to Bernoulli's theory in the next section. First, I present today's standard EUT, almost exclusively in use at least since Laplace's 1814 book on then-nascent probability theory \cite{Laplace1814}. 
+
+Instead of maximizing $\ave{\Dx}$ in the choice of gambles, EUT posits that humans in their decisions appear to maximize the expected change of a {\it different} random variable. Wealth is mapped into utility of wealth $u(x)$, and human decisions are now modeled as maximizing the expected change in utility, 
 \be
 \ave{\Du(x)}=\ave{u(x+\Dx)}-u(x).
 \elabel{EUT}
 \ee
 This is a different mathematical model of human behavior. Crucially, EUT is sensitive to a reference level: wealth before the gamble, which we call $x_0$, unless the utility function is linear\footnote{To see this, require that $\Du$ be a function of $\Dx$ only, $u(x+\Dx)-u(x)=f(\Dx)$. Now imagine fixing $\Dx$ and varying $x$: the equation then implies that changes in the function in response to a change in the argument are constant, $\frac{du}{dx}=\text{const.}$, whose solution is a linear function $u(x)=ax+b$.} (which is not an interesting case because it predicts the same human behavior as maximizing $\ave{\Dx}$).
 
-EUT thus introduces into decision theory the intuitively plausible notion that our ability and willingness to risk losing resources depends on the resources we have. A millionnaire may not notice the loss of \$1,000, whereas for someone else this may mean missing a year of school.
+EUT thus introduces into decision theory the intuitively plausible notion that our ability and willingness to risk losing resources depends on the resources we have. A millionaire may not notice the loss of \$1,000, whereas for someone else this may mean starvation.
 
 \underline{Summary:} EUT, as presented in countless textbooks, at least since \cite{Laplace1814}, models human decision-making by mapping wealth to utility $u(x)$. It then posits that decisions are made by selecting the gamble with the maximum expected change in utility.
 
@@ -300,7 +304,7 @@ Generally, this expression cannot be brought into the form of \eref{EUT_B}, wher
 \end{center}
 
 
-Only a linear utility function guarantees the equality $\tmb=\tml$. In other words, Bernoulli's decision theory, which is often wrongly presented as equivalent to EUT, is really only equivalent to EUT under the assumption of linear utility. But that is equivalent to Huygens's decision theory that we encountered in \secref{Historical}, and that was deemed an unrealistic model of human behavior. 
+{\it Only} a linear utility function guarantees the equality $\tmb=\tml$. In other words, Bernoulli's decision theory, which is often wrongly presented as equivalent to EUT, is really only equivalent to EUT under the assumption of linear utility. But that is equivalent to Huygens's decision theory that we encountered in \secref{Historical}, and that was deemed an unrealistic model of human behavior. 
 
 Bernoulli's equation on his p.~26 is accompanied by a figure, reproduced in \fref{key}. The figure is not part of the original manuscript but was produced by Sommer and Menger. It is a clear illustration that Bernoulli's decision theory is not only inconsistent with EUT but indeed questionable in itself. Here is why: the maximum fee to be paid is represented in the figure by the length pB ($\tm$). This length is clearly less than the length BC ($\pi_1$) that represents the minimum prize to be received from playing the lottery\footnote{The types of lotteries considered by Bernoulli always result in receiving some prize, \ie it is not possible to receive nothing in return for the fee. For example, in the famous St. Petersburg lottery (the focus of Bernoulli's paper), at least \$1 is paid out (or one ducat in Bernoulli's currency).}. The minimum net change in wealth, \ie the worst possible result from playing the lottery, is thus $\pi_1-\tm>0$, which is positive. This lottery represents a guaranteed win of at least $\pi_1-\tm$ and possibly much more. There is no good reason to reject it, and a theory that predicts people would reject it will soon be falsified by observation. Ask the person next to you if he'd like to play the following gamble: toss a coin, and if heads shows the person gets \$20, if it's tails he gets \$10.
 
@@ -428,11 +432,11 @@ On the other hand, another plausible interpretation would keep Bernoulli's state
 By ``profit'' Bernoulli means ``prize,'' disregarding the fee.
 \ei
 
-Laplace presents modern EUT that computes $\ave{\Du}$ as a criterion for gamble participation and ascribes it to Bernoulli, omitting the fact that Bernoulli did not actually compute this object. If the inconsistency between Bernoulli and the far more natural modern form of EUT seems astonishing, we should remind ourselves of how early in the development of probability theory, mathematics, and of course economics Bernoulli's study sits. Probability theory was in its infancy (Kolmogorov's axioms of 1933 \cite{Kolmogorov1933} are often considered the foundation of modern probability theory). The key concept Bernoulli stumbles over was in the process of being developed in the 18th century. This concept is the following:  a function of a random value, such as $u(x)$, defines a new random variable (see \secref{Mathematical}) whose expectation value is not trivially related to the expectation value of $X$, namely $\ave{u(x)}\neq u(\ave{x})$, and $\ave{\Du(x)}\neq u(\ave\Dx)$ \etc As an illustration of the historical mathematical context, let's remember that this complication is behind Bertrand's circle problem \cite{Bertrand1889}, put forward as late as 1889 in response to Laplace's flawed ``principle of insufficient reason'' of 1812, which it exposes as invalid, see the discussion in \cite[p.~20]{vanKampen2007}.
+Laplace presents modern EUT that computes $\ave{\Du}$ as a criterion for gamble participation and ascribes it to Bernoulli, omitting the fact that Bernoulli did not actually compute this object. If the inconsistency between Bernoulli and the far more natural modern form of EUT seems astonishing, we should remind ourselves of how early in the development of probability theory, mathematics, and of course economics Bernoulli's study sits. Probability theory was in its infancy (Kolmogorov's axioms of 1933 \cite{Kolmogorov1933} are often considered the foundation of modern probability theory). The key concept Bernoulli stumbles over was in the process of being developed in the 18th century. This concept is the following:  a function of a random value, such as $u(x)$, defines a new random variable (see \secref{Mathematical}) whose expectation value is not trivially related to the expectation value of $X$, namely $\ave{u(x)}\neq u(\ave{x})$, and $\ave{\Du(x)}\neq u(\ave\Dx)$ \etc This was certainly not universally known in Bernoulli's days. In fact, this complication is behind Bertrand's circle problem \cite{Bertrand1889}, put forward as late as 1889 in response to Laplace's flawed ``principle of insufficient reason'' of 1812, which it exposes as invalid, see the discussion in \cite[p.~20]{vanKampen2007}.
 
 It is my impression that the inconsistency between Bernoulli's decision theory and modern EUT has caused a great deal of confusion. For instance, Karl Menger's famous result that utility functions must be bounded \cite{Menger1934} makes use of Bernoulli's original work and falls apart when one tries to derive it from modern EUT \cite{Peters2011c,PetersGell-Mann2016}. Campbell notes that this result is now ``routinely ignored'' \cite[p.~5]{Campbell2017}, yet it persists in the literature without a retraction of, or comment on, the original paper. Similarly, discussions of prospect theory and cumulative prospect theory often confusingly claim that EUT does not contain a reference value. The reference value in EUT is present wealth, $x_0$. The confusion may be related to the problem under investigation: if we insist that Bernoulli's and modern EUT are equivalent, we are forced to assume linear utility, and in that special case the reference value, $x_0$, cancels out from the computation of the decision criterion $\ave{\Du}$ in \eref{EUT}.
 
-A clear understanding of Bernoulli's work and its deviations from modern EUT prevents this sort of confusion. It leads to an interpretation of EUT in terms of ergodicity transformations that has proved very useful recently, shedding new light on long-standing problems in economic theory, including the St. Petersburg paradox, the cooperation conundrum, and the equity premium puzzle.
+A clear understanding of Bernoulli's work and its deviations from modern EUT prevents this sort of confusion. Moreover, it leads to an interpretation of EUT in terms of ergodicity transformations that has proved very useful recently, shedding new light on long-standing problems in economic theory, including the St. Petersburg paradox, the cooperation conundrum, and the equity premium puzzle.
 
 \bibliographystyle{plain}
 \bibliography{bibliography}
